@@ -1,0 +1,20 @@
+[Unit]
+Description=Self-hosted WhatsApp bridge
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=whatsappbridge
+Group=whatsappbridge
+WorkingDirectory=/opt/whatsapp-bridge
+Environment=HOME=/home/whatsappbridge
+Environment=NODE_ENV=production
+EnvironmentFile=/opt/whatsapp-bridge/.env
+ExecStart=/usr/bin/node /opt/whatsapp-bridge/server.js
+Restart=always
+RestartSec=5
+TimeoutStartSec=180
+
+[Install]
+WantedBy=multi-user.target

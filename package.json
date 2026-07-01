@@ -1,0 +1,33 @@
+{
+  "name": "whatsapp-bridge-server",
+  "version": "0.3.0",
+  "description": "Self-hosted WhatsApp bridge for ioBroker",
+  "author": {
+    "name": "Jailobeam"
+  },
+  "license": "MIT",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "setup": "node setup-env.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "7.0.0-rc13",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "pino": "^9.7.0",
+    "qrcode": "^1.5.4",
+    "qrcode-terminal": "^0.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jailobeam/whatsapp-bridge-server"
+  },
+  "bugs": {
+    "url": "https://github.com/Jailobeam/whatsapp-bridge-server/issues"
+  },
+  "homepage": "https://github.com/Jailobeam/whatsapp-bridge-server"
+}

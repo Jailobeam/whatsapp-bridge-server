@@ -1,0 +1,8 @@
+node_modules
+npm-debug.log
+.env
+session
+bridge-config.json
+.git
+.github
+README-local.md

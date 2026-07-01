@@ -1,0 +1,17 @@
+services:
+  whatsapp-bridge:
+    build: .
+    image: whatsapp-bridge-server:local
+    container_name: whatsapp-bridge
+    restart: unless-stopped
+    ports:
+      - "3008:3008"
+    env_file:
+      - .env
+    environment:
+      TZ: Europe/Berlin
+    volumes:
+      - whatsapp-bridge-data:/data
+
+volumes:
+  whatsapp-bridge-data:
